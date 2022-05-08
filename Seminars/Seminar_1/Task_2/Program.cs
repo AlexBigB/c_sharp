@@ -13,5 +13,17 @@ int a = int.Parse(Console.ReadLine());
 Console.Write("Second number: ");
 int b = int.Parse(Console.ReadLine());
 
-if (a < b) Console.WriteLine(b);
-else Console.WriteLine(a);
+if (a < b) 
+{
+    Console.Write("Max number: ");
+    Console.WriteLine(b);
+    Console.Write("Min number: ");
+    Console.WriteLine(a);
+}
+else 
+{
+    Console.Write("Max number: ");
+    Console.WriteLine(a);
+    Console.Write("Min number: ");
+    Console.WriteLine(b);
+}
