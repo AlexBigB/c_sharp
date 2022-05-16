@@ -23,22 +23,22 @@ void PrintArray(int[] collection)
     }
 }
 
-int IndexOf (int[] massiv, int find)
+int IndexOf(int[] massiv, int find)
 {
     int ind = 0;
     int dlina = massiv.Length;
     int p = -1;
-    
+
     while (ind < dlina)
     {
-        if (massiv[ind] == find) 
+        if (massiv[ind] == find)
         {
             p = ind;
             break;
         }
         ind++;
     }
-    
+
     return p;
 }
 
