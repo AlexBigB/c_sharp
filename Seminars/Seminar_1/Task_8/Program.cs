@@ -15,9 +15,16 @@ if (a > 1)
     while (tmp <= a)
     {
         Console.Write(tmp);
-        if ((a%2==0) & (tmp < a)) Console.Write(", "); // чтобы не было запятой после последнего числа, если а четное
-        else if (tmp < a-1)Console.Write(", "); // чтобы не было запятой после последнего числа, если а не четное
+        // if ((a%2==0) && (tmp < a)) Console.Write(", "); // чтобы не было запятой после последнего числа, если а четное
+        // else if (tmp < a-1)Console.Write(", "); // чтобы не было запятой после последнего числа, если а не четное
+        if (tmp  < a-1) Console.Write(", ");
         tmp += 2;
+        
     }
+    // { 
+    //     Console.Write(tmp);
+    //     Console.Write(", ");
+    //     tmp += 2;
+    // }
 }
 else Console.WriteLine("Pls enter another number");
