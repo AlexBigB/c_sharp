@@ -1,22 +1,28 @@
-﻿Console.Clear();
-Console.Write("Введите числа через пробел: ");
-string s = Console.ReadLine();
-Console.WriteLine(s);
-string[] str_arr=s.Split(' ').ToArray();
-Console.WriteLine(str_arr.Length);
-int[] array = new int[str_arr.Length];
+﻿// Задача 10: Напишите программу, которая принимает на
+// вход трёхзначное число и на выходе показывает вторую
+// цифру этого числа.
+// Примеры:
+// 456 -> 5
+// 782 -> 8
+// 918 -> 1
 
-int[] myStrToInt(string[] s_arr,int[] i_arr)
-{   
+
+Console.Clear();
+Console.Write("Введите цифры через пробел: ");
+string s = Console.ReadLine();
+string[] str_arr = s.Split(' ').ToArray();
+int[] int_arr = new int[str_arr.Length];
+
+int[] myStrToInt(string[] s_arr, int[] i_arr)
+{
     int counter = 0;
     while (counter < s_arr.Length)
     {
         i_arr[counter] = int.Parse(s_arr[counter]);
         counter++;
     }
+    return i_arr;
 }
 
-
-
-
-Console.WriteLine(i);
+myStrToInt(str_arr, int_arr);
+Console.WriteLine($"Вторая цифра: {int_arr[1]}");
