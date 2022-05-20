@@ -1,4 +1,6 @@
-﻿Console.Clear();
+﻿// Ошибка нумерации на семинаре - это была задача под номером 21 для самостоятельного решения
+
+Console.Clear();
 Console.Write("Введите координаты а: ");
 string s_a = Console.ReadLine();
 string[] s_a_arr = s_a.Split(',').ToArray();
