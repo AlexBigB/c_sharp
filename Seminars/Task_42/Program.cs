@@ -22,37 +22,29 @@ void dvoich(int a, string res)
     if (cel >= 2)
     {
         res += ost.ToString();
-        // Console.WriteLine($"res = {res}, ost = {ost}, cel = {cel}");
         dvoich(cel, res);
     }
     else
     {
         res += ost.ToString() + cel.ToString();
-        // Console.WriteLine($"res = {res}, ost = {ost}, cel = {cel}");
-        // char[] array = res.ToCharArray();
-        // Array.Reverse(array);
-        // res = array.ToString();
         string newRes = new string(res.ToCharArray().Reverse().ToArray());
         Console.WriteLine($"{newRes}");
-        //return res;
     }
-    // Console.WriteLine(res);
 }
 string r = string.Empty;
-// Console.WriteLine($"{dvoich(n, r)}");
 dvoich(n, r);
-//Console.WriteLine($"{r}");
 
-// void test(int a)
-// {
-//     // int cel = a / 2;
-//     a /= 2;
-//     if (a >= 2)
-//     {
-//         Console.WriteLine($"a = {a}, a /= 2 = {a / 2}");
-//         test(a);
-//         // Console.WriteLine(a);
-//     }
-// }
-// test(n);
-
+void dvInt(int a, int res, int d)
+{
+    if (a != 0)
+    {
+        res = res + a % 2 * d;
+        a /= 2;
+        d *= 10;
+        dvInt(a, res, d);
+    }
+    else Console.WriteLine(res);
+}
+int re = 0;
+int d10 = 1;
+dvInt(n, re, d10);
