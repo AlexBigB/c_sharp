@@ -45,6 +45,21 @@ void dvInt(int a, int res, int d)
     }
     else Console.WriteLine(res);
 }
+
 int re = 0;
 int d10 = 1;
 dvInt(n, re, d10);
+
+
+void dvIntRec(int a)
+{
+    if (a == 0) return;
+    else 
+    {
+        dvIntRec(a / 2);
+        Console.Write(a % 2);
+    }
+}
+dvIntRec(n);
+
+
