@@ -1,8 +1,8 @@
 ﻿Console.Clear();
 
-int[,] GetArray(int a, int b)
+int[,] GetArray(int numStrings, int numColumns)
 {
-    int[,] myArr = new int[a, b];
+    int[,] myArr = new int[numStrings, numColumns];
     Random myRnd = new Random();
     for (int i = 0; i < myArr.GetLength(0); i++)
     {
@@ -23,14 +23,18 @@ void PrintArray(int[,] arr)
             Console.Write($"{arr[i, j]} ");
         }
         Console.WriteLine();
-        // Console.WriteLine(string.Join(" ", arr[i,]));
     }
 }
 
-Console.Write("Введите количество строк: ");
-int n = int.Parse(Console.ReadLine());
-Console.Write("Введите количество столбцов: ");
-int m = int.Parse(Console.ReadLine());
 
+int GetIntVariable (string message)
+{
+    Console.Write(message);
+    int n = int.Parse(Console.ReadLine());
+    return n;
+}
+
+int n = GetIntVariable("Введите количество строк: ");
+int m = GetIntVariable("Введите количество столбцов: ");
 int[,] bestArr = GetArray(n, m);
 PrintArray(bestArr);
